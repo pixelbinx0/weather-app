@@ -5,39 +5,64 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="App.css"> <!-- Adjust path as needed -->
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root">
+      <!-- The container content added directly inside the root -->
+      <div class="container">
+          <div class="settings">
+              <img src="settings-icon.png" alt="Settings" width="24" />
+          </div>
+          <div class="language-switch">EN</div>
+          <div class="search-box">
+              <input type="text" placeholder="Search your location..." />
+              <button>
+                  <img src="search-icon.png" alt="Search" class="search-icon" />
+              </button>
+          </div>
+          <div id="particles-js"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" class="animated-background">
+            <circle cx="50" cy="50" r="40" fill="#00c6ff" />
+          </svg>
+          
+          <style>
+            .animated-background {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            }
+          
+            .animated-background circle {
+              animation: pulse 2s infinite;
+            }
+          
+            @keyframes pulse {
+              0% {
+                r: 40;
+                fill: #00c6ff;
+              }
+              50% {
+                r: 50;
+                fill: #0072ff;
+              }
+              100% {
+                r: 40;
+                fill: #00c6ff;
+              }
+            }
+          </style>
+          
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          
+          
+          <div class="title">Search your location...</div>
+          <img src="compass-icon.png" alt="Compass" class="compass" />
+          <a href="#" class="more-info">More Info</a>
+      </div>
+    </div>
   </body>
 </html>
