@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "/Users/gajanansawale/Documents/Weather-app/weather-dashboard/src/Weather-card.css";
+import "./WeatherCard.css";
+
+
 
 const WeatherCard = ({ data }) => {
   const [showCard, setShowCard] = useState(false); // State to manage animation
